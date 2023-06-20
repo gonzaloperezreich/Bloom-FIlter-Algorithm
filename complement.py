@@ -1,7 +1,7 @@
 import numpy as np
 import random as rd
-max_length=15
-k=5
+max_length=50
+k=3
 primo= 104723
 
 #Definiremos Una matriz de tamañp k x max_length con k arrreglos de tamño max_length con valores aleatorios en [1,p-1]
