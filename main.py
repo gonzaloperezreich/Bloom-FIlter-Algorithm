@@ -4,10 +4,11 @@ import numpy as np
 import random as rd
 import pandas as pd
 import math
+import time
 from complement import genera_arreglo_b, genera_matriz_a, sacar_porcentaje_de_datos
 
 def hash(string, a, b, m): #funcion de hash
-    ascii_lista = [ord(caracter) for caracter in string]
+    ascii_lista = [ord(caracter) for caracter in str(string)]
     x = 0
     for i in range(len(ascii_lista)):
         x += ascii_lista[i]*a[i]
@@ -18,7 +19,7 @@ def hash(string, a, b, m): #funcion de hash
 # create a dataframe after reading .csv file
 dataframe = pd.read_csv('Popular-Baby-Names-Final.csv') 
 
-n = 10000 #tamaño de los test
+n = 40000 #tamaño de los test
 D = dataframe.shape[0] #tamaño del csv
 maxlen = 50 #solo dejamos los strings hasta con 50 caracteres
 primo= 104723
@@ -48,3 +49,23 @@ for e in [0.25, 0.1, 0.05, 0.01]: #probabilidades de error
     for p in [80, 60, 40, 20]:
         buscar = sacar_porcentaje_de_datos('Popular-Baby-Names-Final.csv', 'Films-Actualizado.csv', p, n)
         print("Se genero una busqueda con " + str(p) + "%" + " de exito en busquedas")
+        print("Inicio de busqueda con filtro")
+        inicio = time.time()
+        c = 0
+        for s in buscar:
+            #revisar filtro
+            entrar = True
+            for i in range(k):
+                r = hash(s, a[i], b[i], m)
+                if(M[r] != 1):
+                    entrar = False
+                    break
+            if entrar == False:
+                c+= 1
+            if entrar:       
+                for row in csv_file:
+                    if s == row[0]:
+                        pass
+        fin = time.time()
+        print("La busqueda demoro " + str(fin-inicio) + "s " + str(c))
+        #print("Inicio de busqueda sin filtro")

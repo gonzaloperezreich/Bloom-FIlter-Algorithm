@@ -27,9 +27,9 @@ def sacar_porcentaje_de_datos(data1,data2, porcentaje,total_datos):
     df1 = pd.read_csv(str(data1))
     df2 = pd.read_csv(str(data2))
     cantidad_a_sacar = int((total_datos * porcentaje) // 100)
-    cantidad_restante= total_datos-cantidad_a_sacar
-    filas_aleatorias_df1 = df1.sample(cantidad_a_sacar)
-    filas_aleatorias_df2=df2.sample(cantidad_restante)
+    cantidad_restante = total_datos-cantidad_a_sacar
+    filas_aleatorias_df1 = df1.sample(cantidad_a_sacar, replace=True)
+    filas_aleatorias_df2 = df2.sample(cantidad_restante, replace=True)
     filas_aleatorias = pd.concat([filas_aleatorias_df1, filas_aleatorias_df2])
     data_final = filas_aleatorias["Name"].to_numpy()
     np.random.shuffle(data_final)
