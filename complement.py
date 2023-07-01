@@ -1,8 +1,7 @@
 import numpy as np
 import random as rd
-import csv
 import pandas as pd
-import sys
+
 
 max_length=50
 k=3
@@ -26,35 +25,19 @@ def genera_arreglo_b():
     
     return b
 
-def sample_n_from_csv(filename:str, n:int=100, total_rows:int=None) -> pd.DataFrame:
-    if total_rows==None:
-        with open(filename,"r") as fh:
-            total_rows = sum(1 for row in fh)
-    if(n>total_rows):
-        print("Error: n > total_rows", file=sys.stderr) 
-    skip_rows =  rd.sample(range(1,total_rows+1), total_rows-n)
-    return pd.read_csv(filename, skiprows=skip_rows)
 
-# Funcion que enera un arreglo de largo n con un porcentaje de elementos que estan en el csv de a
-# a = [0, 1]
-def genera_arrelo_busqueda(n, a):
-    #arr = np.empty(n, dtype=object)
-    datos = []
-    elementoscsv = int(n*a)
-    print(elementoscsv)
-    #read csv, and split on "," the line
-    dft = pd.read_csv('Popular-Baby-Names-Final.csv')
-    dff = pd.read_csv('Films-Actualizado.csv')
+def sacar_porcentaje_de_datos(data1,data2, porcentaje,total_datos):
+    df1 = pd.read_csv(str(data1))
+    df2 = pd.read_csv(str(data2))
+    cantidad_a_sacar = int((total_datos * porcentaje) // 100)
+    cantidad_restante= total_datos-cantidad_a_sacar
+    filas_aleatorias_df1 = df1.sample(cantidad_a_sacar)
+    filas_aleatorias_df2=df2.sample(cantidad_restante)
+    print(filas_aleatorias_df1.count())
+    print(filas_aleatorias_df2.count())
+    filas_aleatorias = pd.concat([filas_aleatorias_df1, filas_aleatorias_df2])
+    data_final = filas_aleatorias["Name"].to_numpy()
+    np.random.shuffle(data_final)
+    return(data_final)
 
-    names = sample_n_from_csv('Popular-Baby-Names-Final.csv', n=elementoscsv)
-#    test = sample_n_from_csv('Films-Actualizado.csv', n=(n - elementoscsv))
-
-    for name in names:
-        datos.append(name[0])
-#    for s in test:
-#        datos.append(s)
-
-    return datos
-
-print(sample_n_from_csv('Popular-Baby-Names-Final.csv', n=5))
-print(genera_arrelo_busqueda(10, 0.5))
+#print(sacar_porcentaje_de_datos("Popular-Baby-Names-Final.csv","Films-Actualizado.csv",50,1000))
