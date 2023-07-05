@@ -7,6 +7,8 @@ import math
 import time
 from complement import genera_arreglo_b, genera_matriz_a, sacar_porcentaje_de_datos
 
+#films tiene 3700 filas
+#hay 93890 names
 def hash(string, a, b, m): #funcion de hash
     ascii_lista = [ord(caracter) for caracter in str(string)]
     x = 0
@@ -18,11 +20,10 @@ def hash(string, a, b, m): #funcion de hash
 
 # create a dataframe after reading .csv file
 dataframe = pd.read_csv('Popular-Baby-Names-Final.csv') 
-
-n = 40000 #tamaño de los test
 D = dataframe.shape[0] #tamaño del csv
+n = 10000000 #tamaño de los test
 maxlen = 50 #solo dejamos los strings hasta con 50 caracteres
-primo= 104723
+primo= 10000019
 
 for e in [0.25, 0.1, 0.05, 0.01]: #probabilidades de error
     print("Empezando test con error " + str(e))
