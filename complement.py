@@ -2,9 +2,10 @@ import numpy as np
 import random as rd
 import pandas as pd
 
-primo= 104723
+primo= 100019
 
 #Definiremos Una matriz de tamañp k x max_length con k arrreglos de tamño max_length con valores aleatorios en [1,p-1]
+
 def genera_matriz_a(k, max_length):
     a= np.zeros((k,max_length))
     for i in range(k):
@@ -13,10 +14,18 @@ def genera_matriz_a(k, max_length):
     
     return a
 
+    
+'''
+def genera_matriz_a(k):
+    a= np.zeros(k, dtype=np.int32)
+    for i in range(k):
+        a[i]= rd.randint(1, primo-1)
+    return a
+'''
 
 #Definiremos un arreglo b de largo k que posee valores aleatorios entre [0,p-1]
 def genera_arreglo_b(k):
-    b=np.zeros(k)
+    b=np.zeros(k, dtype=np.int32)
     for i in range(len(b)):
         b[i]=rd.randint(0,primo-1)
     

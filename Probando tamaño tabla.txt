@@ -1,0 +1,177 @@
+Empezando test con error 0.01
+el m óptimo es  899932
+Se usara un arreglo de tamaño 699932 con 5 funciones de hash
+Inicio de ingresar Popular-Baby-Names-Final.csv
+Se ingreso Popular-Baby-Names-Final.csv al filtro
+
+Se genero una busqueda con 80% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.1768498420715332s 
+
+Se genero una busqueda con 60% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.1727142333984375s 
+
+Se genero una busqueda con 40% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.17019367218017578s 
+
+Se genero una busqueda con 20% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.17299151420593262s 
+Se usara un arreglo de tamaño 799932 con 6 funciones de hash
+Inicio de ingresar Popular-Baby-Names-Final.csv
+Se ingreso Popular-Baby-Names-Final.csv al filtro
+
+Se genero una busqueda con 80% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.19649028778076172s 
+
+Se genero una busqueda con 60% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.182586669921875s 
+
+Se genero una busqueda con 40% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.17212247848510742s 
+
+Se genero una busqueda con 20% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.15653562545776367s 
+Se usara un arreglo de tamaño 899932 con 7 funciones de hash
+Inicio de ingresar Popular-Baby-Names-Final.csv
+Se ingreso Popular-Baby-Names-Final.csv al filtro
+
+Se genero una busqueda con 80% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.24760866165161133s 
+
+Se genero una busqueda con 60% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.28177928924560547s 
+
+Se genero una busqueda con 40% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.22235774993896484s 
+
+Se genero una busqueda con 20% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.22379779815673828s 
+Se usara un arreglo de tamaño 999932 con 7 funciones de hash
+Inicio de ingresar Popular-Baby-Names-Final.csv
+Se ingreso Popular-Baby-Names-Final.csv al filtro
+
+Se genero una busqueda con 80% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.30928635597229004s 
+
+Se genero una busqueda con 60% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.2716853618621826s 
+
+Se genero una busqueda con 40% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.25090956687927246s 
+
+Se genero una busqueda con 20% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.20088529586791992s 
+Se usara un arreglo de tamaño 1099932 con 8 funciones de hash
+Inicio de ingresar Popular-Baby-Names-Final.csv
+Se ingreso Popular-Baby-Names-Final.csv al filtro
+
+Se genero una busqueda con 80% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.29868459701538086s 
+
+Se genero una busqueda con 60% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.277188777923584s 
+
+Se genero una busqueda con 40% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.25238466262817383s 
+
+Se genero una busqueda con 20% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.2145860195159912s 
+
+
+Empezando test con error 0.001
+el m óptimo es  1349898
+Se usara un arreglo de tamaño 1149898 con 8 funciones de hash
+Inicio de ingresar Popular-Baby-Names-Final.csv
+Se ingreso Popular-Baby-Names-Final.csv al filtro
+
+Se genero una busqueda con 80% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.3086092472076416s 
+
+Se genero una busqueda con 60% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.2783341407775879s 
+
+Se genero una busqueda con 40% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.25850367546081543s 
+
+Se genero una busqueda con 20% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.21386408805847168s 
+Se usara un arreglo de tamaño 1249898 con 9 funciones de hash
+Inicio de ingresar Popular-Baby-Names-Final.csv
+Se ingreso Popular-Baby-Names-Final.csv al filtro
+
+Se genero una busqueda con 80% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.34690380096435547s 
+
+Se genero una busqueda con 60% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.33698129653930664s 
+
+Se genero una busqueda con 40% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.2871217727661133s 
+
+Se genero una busqueda con 20% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.26157140731811523s 
+Se usara un arreglo de tamaño 1349898 con 10 funciones de hash
+Inicio de ingresar Popular-Baby-Names-Final.csv
+Se ingreso Popular-Baby-Names-Final.csv al filtro
+
+Se genero una busqueda con 80% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.3533210754394531s 
+
+Se genero una busqueda con 60% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.3078892230987549s 
+
+Se genero una busqueda con 40% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.24982190132141113s 
+
+Se genero una busqueda con 20% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.2152419090270996s 
+Se usara un arreglo de tamaño 1449898 con 11 funciones de hash
+Inicio de ingresar Popular-Baby-Names-Final.csv
+Se ingreso Popular-Baby-Names-Final.csv al filtro
+
+Se genero una busqueda con 80% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.32790637016296387s 
+
+Se genero una busqueda con 60% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.7149150371551514s
+
+Se genero una busqueda con 40% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.49188971519470215s 
+
+Se genero una busqueda con 20% de exito en busquedas
+Inicio de busqueda con filtro
+La busqueda con filtro demoro 0.2665061950683594s 
