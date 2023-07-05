@@ -169,7 +169,6 @@ for e in [0.25, 0.1, 0.05, 0.01, 0.001]: #probabilidades de error
         print("\nSe genero una busqueda con " + str(p) + "%" + " de exito en busquedas")
         print("Inicio de busqueda con filtro")
         c=0
-        csv_file = csv.reader(open('Popular-Baby-Names-Final.csv', "r"), delimiter=",")
         inicio1 = time.time()
         for s in buscar:
             #revisar filtro
@@ -180,10 +179,10 @@ for e in [0.25, 0.1, 0.05, 0.01, 0.001]: #probabilidades de error
                     entrar = False
                     c+= 1
                     break                
-            if entrar:       
+            if entrar:    
+                csv_file = csv.reader(open('Popular-Baby-Names-Final.csv', "r"), delimiter=",")   
                 for row in csv_file:
                     if s == row[0]:
-                        print("Encontrado")
                         break
             #Si nunca hizo break, el algoritmo dice que lo encontró (podría ser FP)
         fin1 = time.time()
@@ -193,6 +192,7 @@ for e in [0.25, 0.1, 0.05, 0.01, 0.001]: #probabilidades de error
         inicio2 = time.time()
         for s in buscar:
             # print(s)
+            csv_file = csv.reader(open('Popular-Baby-Names-Final.csv', "r"), delimiter=",")
             for row in csv_file:
                 if s == row[0]:
                     break #Si hace break, lo encontró
