@@ -21,8 +21,8 @@ def hash(string, a, b, m): #funcion de hash
 
 # create a dataframe after reading .csv file
 dataframe = pd.read_csv('Popular-Baby-Names-Final.csv') 
-n = 1000 #tamaño de los test
-D = dataframe.shape[0] #tamaño del csv
+t = 1000 #tamaño de los test
+n = dataframe.shape[0] #tamaño del csv
 maxlen = 50 #solo dejamos los strings hasta con 50 caracteres
 # primo= 10000019,10000003, 100003, 
 primo = 100000019
@@ -30,9 +30,9 @@ primo = 100000019
 for e in [0.25, 0.1, 0.05, 0.01, 0.001]: #probabilidades de error
     print("\n\nEmpezando test con error " + str(e))
     # Calcular el tamaño del arregglo m y la cantidad de funciones k
-    m = math.ceil(-D*math.log(e) / (math.log(2)**2))
-    k = round( (m/D) * math.log(2))
-    print("m= "+ str(m), "k= " + str(k))
+    m = math.ceil(-n*math.log(e) / (math.log(2)**2))
+    k = round( (m/n) * math.log(2))
+    print("n= "+ str(n), "m= "+ str(m), "k= " + str(k))
 
     M = bitarray.bitarray(m)
     M.setall(0)
@@ -49,8 +49,8 @@ for e in [0.25, 0.1, 0.05, 0.01, 0.001]: #probabilidades de error
             M[r] = 1
 
     for p in [80, 60, 40, 20]:
-        buscar = sacar_porcentaje_de_datos('Popular-Baby-Names-Final.csv', 'Films-Actualizado.csv', p, n)
-        c=0
+        buscar = sacar_porcentaje_de_datos('Popular-Baby-Names-Final.csv', 'Films-Actualizado.csv', p, t)
+        c=0 #Número de negativos según el filtro.
         inicio1 = time.time()
         for s in buscar:
             #revisar filtro si tiene que entrar entrar = true
@@ -75,6 +75,8 @@ for e in [0.25, 0.1, 0.05, 0.01, 0.001]: #probabilidades de error
                 if s == row[0]:
                     break #Si hace break, lo encontró
         fin2 = time.time()
-        print(str(p) + ": Sin filtro demoro " + str(fin2-inicio2) + "s. Con filtro demoro " + str(fin1-inicio1) + ". Saltos: "+str(c))
+        print(str(p) + ": Sin filtro demoro " + str(fin2-inicio2) + "s. Con filtro demoro " + str(fin1-inicio1) + \
+            ".\nNúmero de negativos real: " + str(round((1-(p/100))*t)) + ". Número de negativos según el filtro: " + str(c))
+
 
 
