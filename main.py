@@ -19,19 +19,9 @@ def hash(string, a, b, m): #funcion de hash
     x = (x % primo) % m
     return int(x)
 
-'''
-def hash(string, a, b, m):
-    x = b
-    for caracter in str(string):
-        x += (ord(caracter)) * (a)
-    x %= primo
-    x %= m
-    return int(x)
-'''
-
 # create a dataframe after reading .csv file
 dataframe = pd.read_csv('Popular-Baby-Names-Final.csv') 
-n = 5000 #tamaño de los test
+n = 200 #tamaño de los test
 D = dataframe.shape[0] #tamaño del csv
 maxlen = 50 #solo dejamos los strings hasta con 50 caracteres
 # primo= 10000019,10000003, 100003, 
@@ -140,38 +130,27 @@ for e in [0.25, 0.1, 0.05, 0.01, 0.001]: #probabilidades de error
     # Calcular el tamaño del arregglo m y la cantidad de funciones k
     m = math.ceil(-D*math.log(e) / (math.log(2)**2))
     k = round( (m/D) * math.log(2))
-    print("Se usara un arreglo de tamaño " + str(m) + " con " + str(k) + " funciones de hash")
 
     M = bitarray.bitarray(m)
     M.setall(0)
-    print(M.count(True))
-    #M = np.zeros(m)
     a = genera_matriz_a(k, maxlen)
     b = genera_arreglo_b(k)
 
-    print("Inicio de ingresar Popular-Baby-Names-Final.csv")
-    #read csv, and split on "," the line
+    # read csv, and split on "," the line
     csv_file = csv.reader(open('Popular-Baby-Names-Final.csv', "r"), delimiter=",")
-    #loop through the csv list
+    # ingresar valores del csv al filtro
     for row in csv_file:
         nombre = row[0]
         for i in range(k):
             r = hash(nombre, a[i], b[i], m)
             M[r] = 1
-    print(M.count(True))
-    print("Se ingreso Popular-Baby-Names-Final.csv al filtro")
-
-    # for i in range(len(M)):
-        #print(M[i])
 
     for p in [80, 60, 40, 20]:
         buscar = sacar_porcentaje_de_datos('Popular-Baby-Names-Final.csv', 'Films-Actualizado.csv', p, n)
-        print("\nSe genero una busqueda con " + str(p) + "%" + " de exito en busquedas")
-        print("Inicio de busqueda con filtro")
         c=0
         inicio1 = time.time()
         for s in buscar:
-            #revisar filtro
+            #revisar filtro si tiene que entrar entrar = true
             entrar = True
             for i in range(k):
                 r = hash(s, a[i], b[i], m)
@@ -186,17 +165,13 @@ for e in [0.25, 0.1, 0.05, 0.01, 0.001]: #probabilidades de error
                         break
             #Si nunca hizo break, el algoritmo dice que lo encontró (podría ser FP)
         fin1 = time.time()
-        print("La busqueda con filtro demoro " + str(fin1-inicio1) + "s " + str(c))
-        print("Inicio de busqueda sin filtro")
-        csv_file = csv.reader(open('Popular-Baby-Names-Final.csv', "r"), delimiter=",")
         inicio2 = time.time()
         for s in buscar:
-            # print(s)
             csv_file = csv.reader(open('Popular-Baby-Names-Final.csv', "r"), delimiter=",")
             for row in csv_file:
                 if s == row[0]:
                     break #Si hace break, lo encontró
         fin2 = time.time()
-        print("La busqueda sin filtro demoro " + str(fin2-inicio2) + "s ")
+        print(str(p) + ": Sin filtro demoro " + str(fin2-inicio2) + "s. Con filtro demoro " + str(fin1-inicio1) + ". Saltos: "+str(c))
 
 
