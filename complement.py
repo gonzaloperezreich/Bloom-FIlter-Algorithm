@@ -2,9 +2,9 @@ import numpy as np
 import random as rd
 import pandas as pd
 
-primo= 100019
+primo= 100000019
 
-#Definiremos Una matriz de tamañp k x max_length con k arrreglos de tamño max_length con valores aleatorios en [1,p-1]
+#Definiremos Una matriz de tamaño k x max_length con k arrreglos de tamño max_length con valores aleatorios en [1,p-1]
 
 def genera_matriz_a(k, max_length):
     a= np.zeros((k,max_length))
@@ -13,15 +13,6 @@ def genera_matriz_a(k, max_length):
             a[i][j]= rd.randint(1, primo-1)
     
     return a
-
-    
-'''
-def genera_matriz_a(k):
-    a= np.zeros(k, dtype=np.int32)
-    for i in range(k):
-        a[i]= rd.randint(1, primo-1)
-    return a
-'''
 
 #Definiremos un arreglo b de largo k que posee valores aleatorios entre [0,p-1]
 def genera_arreglo_b(k):
@@ -43,3 +34,12 @@ def sacar_porcentaje_de_datos(data1,data2, porcentaje,total_datos):
     data_final = filas_aleatorias["Name"].to_numpy()
     np.random.shuffle(data_final)
     return(data_final)
+
+def hash(string, a, b, m): #funcion de hash
+    ascii_lista = [ord(caracter) for caracter in str(string)]
+    x = 0
+    for i in range(len(ascii_lista)):
+        x += ascii_lista[i]*a[i]
+    x += b
+    x = (x % primo) % m
+    return int(x)

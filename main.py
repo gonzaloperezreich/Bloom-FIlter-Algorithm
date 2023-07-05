@@ -5,26 +5,14 @@ import random as rd
 import pandas as pd
 import math
 import time
-from complement import genera_arreglo_b, genera_matriz_a, sacar_porcentaje_de_datos
+from complement import genera_arreglo_b, genera_matriz_a, sacar_porcentaje_de_datos, hash
 import bitarray
-from sympy import Integer
-
-
-def hash(string, a, b, m): #funcion de hash
-    ascii_lista = [ord(caracter) for caracter in str(string)]
-    x = 0
-    for i in range(len(ascii_lista)):
-        x += ascii_lista[i]*a[i]
-    x += b
-    x = (x % primo) % m
-    return int(x)
 
 # create a dataframe after reading .csv file
 dataframe = pd.read_csv('Popular-Baby-Names-Final.csv') 
 t = 1000 #tamaño de los test
 n = dataframe.shape[0] #tamaño del csv
 maxlen = 50 #solo dejamos los strings hasta con 50 caracteres
-# primo= 10000019,10000003, 100003, 
 primo = 100000019
 
 for e in [0.25, 0.1, 0.05, 0.01, 0.001]: #probabilidades de error
