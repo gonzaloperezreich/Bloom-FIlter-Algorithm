@@ -43,3 +43,5 @@ def hash(string, a, b, m): #funcion de hash
     x += b
     x = (x % primo) % m
     return int(x)
+
+# print(sacar_porcentaje_de_datos('Popular-Baby-Names-Final.csv', 'Films-Actualizado.csv', 80, 100))
