@@ -15,8 +15,9 @@ n = dataframe.shape[0] #tamaño del csv
 maxlen = 50 #solo dejamos los strings hasta con 50 caracteres
 primo = 100000019
 
+print("\nTamaño de los test: " + str(t))
 for e in [0.25, 0.1, 0.05, 0.01, 0.001]: #probabilidades de error
-    print("\n\nEmpezando test con error " + str(e))
+    print("\nEmpezando test con error " + str(e))
     # Calcular el tamaño del arregglo m y la cantidad de funciones k
     m = math.ceil(-n*math.log(e) / (math.log(2)**2))
     k = round( (m/n) * math.log(2))
