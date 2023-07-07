@@ -31,6 +31,7 @@ Additionally, it can be noticed that the last movie records are accompanied by (
 Finally, movie names that coincided with baby names were deleted in order to avoid such false positives.
 
 # Creación de arreglo de búsqueda
+## Español:
 El archivo filtro.ipynb posee una función que permite dado dos datasets, un porcentaje y una cantidad "n" generar un arreglo de largo n con un porcentaje de elementos del primer dataset y el procentaje restante de n con elementos del segundo dataset. 
 
 Esto es útil para el testeo pues podemos mezclar diferentes datas para hacer búsquedas infructuosas.
@@ -44,6 +45,7 @@ This is useful for testing as we can mix different data to perform unsuccessful 
 
 # Ejecución
 
+## Español:
 Existen dos archivos, main.py y main2.py el primero según la teoría itera sobre probabiliades de tener un falso positivo y en base a ello calcula el m y k óptimo. 
 La variable n corresponde a el tamaño del arreglo de búsqueda que se desea utilizar.
 
