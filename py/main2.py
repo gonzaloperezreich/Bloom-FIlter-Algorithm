@@ -9,7 +9,7 @@ from complement import genera_arreglo_b, genera_matriz_a, sacar_porcentaje_de_da
 import bitarray
 
 # create a dataframe after reading .csv file
-dataframe = pd.read_csv('Popular-Baby-Names-Final.csv') 
+dataframe = pd.read_csv('data/Popular-Baby-Names-Final.csv') 
 t = 10 #tamaño de los test
 n = dataframe.shape[0] #tamaño del csv
 maxlen = 50 #solo dejamos los strings hasta con 50 caracteres
@@ -26,7 +26,7 @@ for m in range(450000, 900001, 90000): #tamaño de m
         b = genera_arreglo_b(k)
 
         # read csv, and split on "," the line
-        csv_file = csv.reader(open('Popular-Baby-Names-Final.csv', "r"), delimiter=",")
+        csv_file = csv.reader(open('data/Popular-Baby-Names-Final.csv', "r"), delimiter=",")
         # ingresar valores del csv al filtro
         for row in csv_file:
             nombre = row[0]
@@ -35,7 +35,7 @@ for m in range(450000, 900001, 90000): #tamaño de m
                 M[r] = 1
 
         for p in [80, 60, 40, 20]:
-            buscar = sacar_porcentaje_de_datos('Popular-Baby-Names-Final.csv', 'Films-Actualizado.csv', p, t)
+            buscar = sacar_porcentaje_de_datos('data/Popular-Baby-Names-Final.csv', 'data/Films-Actualizado.csv', p, t)
             c=0 #Número de negativos según el filtro.
             inicio1 = time.time()
             for s in buscar:
@@ -48,7 +48,7 @@ for m in range(450000, 900001, 90000): #tamaño de m
                         c+= 1
                         break                
                 if entrar:    
-                    csv_file = csv.reader(open('Popular-Baby-Names-Final.csv', "r"), delimiter=",")   
+                    csv_file = csv.reader(open('data/Popular-Baby-Names-Final.csv', "r"), delimiter=",")   
                     for row in csv_file:
                         if s == row[0]:
                             break
@@ -56,7 +56,7 @@ for m in range(450000, 900001, 90000): #tamaño de m
             fin1 = time.time()
             inicio2 = time.time()
             for s in buscar:
-                csv_file = csv.reader(open('Popular-Baby-Names-Final.csv', "r"), delimiter=",")
+                csv_file = csv.reader(open('data/Popular-Baby-Names-Final.csv', "r"), delimiter=",")
                 for row in csv_file:
                     if s == row[0]:
                         break #Si hace break, lo encontró
