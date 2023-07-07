@@ -10,7 +10,7 @@ import bitarray
 
 # create a dataframe after reading .csv file
 dataframe = pd.read_csv('Popular-Baby-Names-Final.csv') 
-t = 100 #tamaño de los test
+t = 10 #tamaño de los test
 n = dataframe.shape[0] #tamaño del csv
 maxlen = 50 #solo dejamos los strings hasta con 50 caracteres
 primo = 100000019
