@@ -16,8 +16,8 @@ maxlen = 50 #solo dejamos los strings hasta con 50 caracteres
 primo = 100000019
 for m in range(450000, 900001, 90000): #tamaño de m
     for k in range(2, 8): #cantidad de funcions de hash
-        p = math.pow(1 - math.exp(-k*n/m), k)
-        print("\n" + "m: " + str(m) + " k: " + str(k) + " p: " + str(p) + "\n")
+        e = math.pow(1 - math.exp(-k*n/m), k)
+        print("\n" + "m: " + str(m) + " k: " + str(k) + " e: " + str(e) + "\n")
         print()    
 
         M = bitarray.bitarray(m)
